@@ -37,7 +37,30 @@
 
     <title>Ahmes</title>
     <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="/res/css/main.css">
+    <style>
+    .main-toolbar {
+        margin: 4px;
+
+        z-index: 100 !important;
+
+        background-color: rgba(var(--bs-body-bg-rgb), 0.5) !important;
+        border-radius: var(--bs-border-radius);
+
+        -webkit-backdrop-filter: blur(var(--aton-blur-radius));
+        backdrop-filter: blur(var(--aton-blur-radius));
+    }
+    .main-toolbar .aton-btn {
+        background-color: rgba(var(--bs-body-bg-rgb), 0.0) !important;
+    }
+    .field-label {
+        display: block;
+        padding: 4px;
+        font-size: smaller;
+        margin-top: 4px;
+    }
+    </style>
 
     <!-- Vendors -->
     <script type="text/javascript" src="/vendors/vendors.min.js"></script>
@@ -51,7 +74,7 @@
 </head>
 
 <body>
-    <div id="toolbar" class="aton-toolbar-top"></div>
+    <div id="toolbar" class="aton-toolbar-top main-toolbar"></div>
 
     <div class="aton-poweredby" >
         Powered by <a href="https://aton.ispc.cnr.it/site/" target="_blank">ATON</a>

@@ -6,10 +6,14 @@
 let APP = ATON.App.realize();
 
 APP.PATH_DB = APP.basePath + "data/main.json";
+APP.MAIN_DB = "main";
+APP.TAX_SEP = ">";
 
 APP._currItem = undefined;
 APP._currCat  = undefined;
 APP._db       = undefined;
+
+APP.TAX = {};
 
 
 // APP.setup() is required for web-app initialization
@@ -25,10 +29,21 @@ APP.setup = ()=>{
 	APP.gItem = ATON.createSceneNode("item");
 	APP.gItem.attachToRoot();
 
+    APP.setupTaxonomies();
 	APP.setupEventHandling();
     APP.setupUI();
 
-    APP.getStorage("main").then( APP.onDBLoaded ).catch( (err)=>{ console.log(err) } );
+    APP.getStorage(APP.MAIN_DB).then( APP.onDBLoaded ).catch( (err)=>{ console.log(err) } );
+};
+
+APP.setupTaxonomies = ()=>{
+    APP.TAX.manufatti = [
+        "Alimento",
+        "Arma",
+        "Arma"+APP.TAX_SEP+"Arma da Taglio",
+        "Arma"+APP.TAX_SEP+"Arco",
+        "Arma"+APP.TAX_SEP+"Freccia",
+    ];
 };
 
 
@@ -109,13 +124,73 @@ APP.onDBLoaded = (data)=>{
 =============================*/
 APP.setupUI = ()=>{
     ATON.UI.get("toolbar").append(
-        ATON.UI.createButtonHome(),
+        //ATON.UI.createButtonHome(),
+        ATON.UI.createButton({
+            icon: "bi-ui-radios-grid",
+            onpress: APP.modalEditCurrentItem
+        })
     );
 };
 
 APP.modalEditCurrentItem = ()=>{
-    let elBody = ATON.UI.createContainer();
+    let elBody = ATON.UI.createContainer({
+        //style: "padding:4px"
+    });
 
+    let D = {};
+    D[APP._currCat] = {};
+    D[APP._currCat][APP._currItem] = APP._db[APP._currCat][APP._currItem];
+
+    // Nome
+    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Nome</span>") );
+    elBody.append( ATON.UI.createInputText({
+        //label: "Nome",
+        oninput: (s)=>{
+            D[APP._currCat][APP._currItem].nome = s;
+        }
+    }));
+
+    // Descr
+    let elDescr = ATON.UI.createElementFromHTMLString("<textarea spellcheck='false' rows='4' cols='50' style='width:100%'></textarea>");
+    elDescr.onchange = ()=>{
+        console.log( elDescr.value );
+    };
+    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Descrizione</span>") );
+    elBody.append( elDescr );
+
+    // Cat
+    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Num. Cat. ME</span>") );
+    elBody.append( ATON.UI.createInputText({
+        oninput: (s)=>{
+            D[APP._currCat][APP._currItem].numero_cat = s;
+        }
+    }));
+
+    // Type
+    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Tipo</span>") );
+    elBody.append( ATON.UI.createInputText({
+        list: APP.TAX[APP._currCat],
+        onchange: (s)=>{
+            let v = s.split(APP.TAX_SEP);
+            D[APP._currCat][APP._currItem].tipo = v[v.length-1];
+            console.log(D[APP._currCat][APP._currItem])
+        }
+    }));
+
+    // Save
+    elBody.append( ATON.UI.createContainer({ 
+        classes: "d-grid gap-2",
+        style: "margin-top: 20px",
+        items: [
+            ATON.UI.createButton({
+                text: "Save",
+                classes: "aton-btn-highlight",
+                onpress: ()=>{
+
+                }
+            })
+        ]
+    }));
 
     ATON.UI.showModal({
         header: "Edit "+APP._currItem,
