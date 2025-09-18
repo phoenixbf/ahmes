@@ -1,0 +1,563 @@
+{
+  "name": "Manufatto",
+  "children": [
+    {
+      "name": "Alimento",
+      "children": [
+        {
+          "name": "Pane",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Arma",
+      "children": [
+        {
+          "name": "Arma da Taglio",
+          "children": []
+        },
+        {
+          "name": "Arco",
+          "children": []
+        },
+        {
+          "name": "Freccia",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Attrezzo",
+      "children": [
+        {
+          "name": "Attrezzo da Carpenteria",
+          "children": [
+            {
+              "name": "Cubito",
+              "children": []
+            },
+            {
+              "name": "Mazzuolo",
+              "children": []
+            },
+            {
+              "name": "Pennello",
+              "children": []
+            },
+            {
+              "name": "Picchetto",
+              "children": []
+            },
+            {
+              "name": "Punteruolo",
+              "children": []
+            },
+            {
+              "name": "Scalpello",
+              "children": []
+            },
+            {
+              "name": "Spatola",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Attrezzo da Lavoro",
+          "children": [
+            {
+              "name": "Ascia",
+              "children": []
+            },
+            {
+              "name": "Corda",
+              "children": []
+            },
+            {
+              "name": "Falcetto",
+              "children": []
+            },
+            {
+              "name": "Zappa",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Attrezzo da Metallurgia",
+          "children": [
+            {
+              "name": "Crogiolo",
+              "children": []
+            },
+            {
+              "name": "Matrice",
+              "children": []
+            },
+            {
+              "name": "Stampo",
+              "children": [
+                {
+                  "name": "Forma per Pane",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Attrezzo da Pesca",
+          "children": [
+            {
+              "name": "Amo",
+              "children": []
+            },
+            {
+              "name": "Nassa",
+              "children": []
+            },
+            {
+              "name": "Remo",
+              "children": []
+            },
+            {
+              "name": "Rete",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Attrezzo da Tessitura",
+          "children": [
+            {
+              "name": "Ago",
+              "children": []
+            },
+            {
+              "name": "Fuseruola",
+              "children": []
+            },
+            {
+              "name": "Fuso",
+              "children": []
+            },
+            {
+              "name": "Peso da Telaio",
+              "children": []
+            },
+            {
+              "name": "Rocchetto",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Contenitore",
+      "children": [
+        {
+          "name": "Cassetta",
+          "children": []
+        },
+        {
+          "name": "Cofanetto",
+          "children": []
+        },
+        {
+          "name": "Contenitore Intrecciato",
+          "children": [
+            {
+              "name": "Cesta",
+              "children": []
+            },
+            {
+              "name": "Paniere",
+              "children": []
+            },
+            {
+              "name": "Sacco",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gioco",
+      "children": [
+        {
+          "name": "Pedina",
+          "children": []
+        },
+        {
+          "name": "Scacchiera",
+          "children": []
+        },
+        {
+          "name": "Trottola",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Indumento",
+      "children": [
+        {
+          "name": "Abito",
+          "children": []
+        },
+        {
+          "name": "Calzatura",
+          "children": []
+        },
+        {
+          "name": "Copricapo",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Manufatto Funerario",
+      "children": [
+        {
+          "name": "Cassetta",
+          "children": []
+        },
+        {
+          "name": "Cesta Funeraria",
+          "children": []
+        },
+        {
+          "name": "Cono Funerario",
+          "children": []
+        },
+        {
+          "name": "Copertura di Mummia",
+          "children": []
+        },
+        {
+          "name": "Mummia",
+          "children": [
+            {
+              "name": "Mummia Umana",
+              "children": []
+            },
+            {
+              "name": "Mummia Animale",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Sarcofago",
+          "children": []
+        },
+        {
+          "name": "Ushabti",
+          "children": []
+        },
+        {
+          "name": "Vaso Funerario",
+          "children": [
+            {
+              "name": "Vaso Canopo",
+              "children": []
+            },
+            {
+              "name": "Vaso Sarcofago",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Manufatto Rituale",
+      "children": [
+        {
+          "name": "Amuleto",
+          "children": []
+        },
+        {
+          "name": "Contenitore per Offerte",
+          "children": []
+        },
+        {
+          "name": "Contenitore per Ushabti",
+          "children": []
+        },
+        {
+          "name": "Incensiere",
+          "children": []
+        },
+        {
+          "name": "Kernos",
+          "children": []
+        },
+        {
+          "name": "Sedile Votivo",
+          "children": []
+        },
+        {
+          "name": "Situla",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Manufatto Tessile",
+      "children": [
+        {
+          "name": "Benda",
+          "children": []
+        },
+        {
+          "name": "Biancheria da Letto",
+          "children": []
+        },
+        {
+          "name": "Coprisedile",
+          "children": []
+        },
+        {
+          "name": "Filato",
+          "children": []
+        },
+        {
+          "name": "Impagliatura",
+          "children": []
+        },
+        {
+          "name": "Tappeto/Stuoia",
+          "children": []
+        },
+        {
+          "name": "Telo",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Mobile",
+      "children": [
+        {
+          "name": "Appoggio",
+          "children": []
+        },
+        {
+          "name": "Contenitore",
+          "children": []
+        },
+        {
+          "name": "Letto",
+          "children": []
+        },
+        {
+          "name": "Seduta",
+          "children": []
+        },
+        {
+          "name": "Tavolo",
+          "children": []
+        },
+        {
+          "name": "Reggivaso",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Ornamento",
+      "children": [
+        {
+          "name": "Anello",
+          "children": []
+        },
+        {
+          "name": "Bracciale",
+          "children": []
+        },
+        {
+          "name": "Collana",
+          "children": []
+        },
+        {
+          "name": "Orecchino",
+          "children": []
+        },
+        {
+          "name": "Parrucca",
+          "children": []
+        },
+        {
+          "name": "Pendente",
+          "children": []
+        },
+        {
+          "name": "Spillone",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Recipiente",
+      "children": [
+        {
+          "name": "Balsamario",
+          "children": []
+        },
+        {
+          "name": "Bicchiere",
+          "children": []
+        },
+        {
+          "name": "Bottiglia",
+          "children": []
+        },
+        {
+          "name": "Brocca",
+          "children": []
+        },
+        {
+          "name": "Ciotola",
+          "children": []
+        },
+        {
+          "name": "Coppa",
+          "children": []
+        },
+        {
+          "name": "Fiasca",
+          "children": []
+        },
+        {
+          "name": "Piatto",
+          "children": []
+        },
+        {
+          "name": "Unguentario",
+          "children": []
+        },
+        {
+          "name": "Vaso",
+          "children": [
+            {
+              "name": "Anfora",
+              "children": []
+            },
+            {
+              "name": "Bacile",
+              "children": []
+            },
+            {
+              "name": "Giara",
+              "children": []
+            },
+            {
+              "name": "Vasetto",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Statua",
+      "children": [
+        {
+          "name": "Statua Divinità",
+          "children": []
+        },
+        {
+          "name": "Statua Femminile",
+          "children": []
+        },
+        {
+          "name": "Statua Maschile",
+          "children": []
+        },
+        {
+          "name": "Statua Zoomorfa",
+          "children": []
+        },
+        {
+          "name": "Statuetta",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Stele",
+      "children": []
+    },
+    {
+      "name": "Strumento",
+      "children": [
+        {
+          "name": "Strumento per Cura Personale",
+          "children": [
+            {
+              "name": "Applicatore Kohl",
+              "children": []
+            },
+            {
+              "name": "Pettine",
+              "children": []
+            },
+            {
+              "name": "Rasoio",
+              "children": []
+            },
+            {
+              "name": "Specchio",
+              "children": []
+            },
+            {
+              "name": "Tavolozza da Cosmesi",
+              "children": []
+            },
+            {
+              "name": "Tubetto Kohl",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Strumento Musicale",
+          "children": []
+        },
+        {
+          "name": "Strumento Scrittorio",
+          "children": [
+            {
+              "name": "Etichetta",
+              "children": []
+            },
+            {
+              "name": "Ostracon/Ostrakon",
+              "children": []
+            },
+            {
+              "name": "Paletta da Scriba",
+              "children": []
+            },
+            {
+              "name": "Papiro",
+              "children": []
+            },
+            {
+              "name": "Pestello per Papiro",
+              "children": []
+            },
+            {
+              "name": "Tavoletta",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

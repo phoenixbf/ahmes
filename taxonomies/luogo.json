@@ -1,0 +1,90 @@
+{
+  "name": "Location",
+  "children": [
+    {
+      "name": "Location Esterna",
+      "children": [
+        {
+          "name": "Cappella",
+          "children": []
+        },
+        {
+          "name": "Casa",
+          "children": []
+        },
+        {
+          "name": "Magazzino",
+          "children": []
+        },
+        {
+          "name": "Porto",
+          "children": []
+        },
+        {
+          "name": "Santuario",
+          "children": []
+        },
+        {
+          "name": "Tempio",
+          "children": []
+        },
+        {
+          "name": "Tomba",
+          "children": [
+            {
+              "name": "Mastaba",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Location Interna",
+      "children": [
+        {
+          "name": "Ambiente Casa",
+          "children": []
+        },
+        {
+          "name": "Ambiente Tempio",
+          "children": []
+        },
+        {
+          "name": "Interno Cappella",
+          "children": []
+        },
+        {
+          "name": "Interno Magazzino",
+          "children": []
+        },
+        {
+          "name": "Interno Santuario",
+          "children": []
+        },
+        {
+          "name": "Interno Tomba",
+          "children": [
+            {
+              "name": "Interno Mastaba",
+              "children": [
+                {
+                  "name": "Pozzo",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ambiente Casa",
+          "children": []
+        },
+        {
+          "name": "Ambiente Tempio",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Personaggio",
+  "children": [
+    {
+      "name": "Combattente",
+      "children": [
+        {
+          "name": "Guardia",
+          "children": []
+        },
+        {
+          "name": "Soldato",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Funzionario",
+      "children": [
+        {
+          "name": "Alto Funzionario",
+          "children": [
+            {
+              "name": "Capo della Giustizia",
+              "children": []
+            },
+            {
+              "name": "Capo delle Casa Reale",
+              "children": []
+            },
+            {
+              "name": "Capo delle Forze Armate",
+              "children": []
+            },
+            {
+              "name": "Consigliere",
+              "children": []
+            },
+            {
+              "name": "Gran Tesoriere",
+              "children": []
+            },
+            {
+              "name": "Ministro",
+              "children": []
+            },
+            {
+              "name": "Visir",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Basso Funzionario",
+          "children": [
+            {
+              "name": "Generale Militare",
+              "children": []
+            },
+            {
+              "name": "Nomarca",
+              "children": []
+            },
+            {
+              "name": "Scriba",
+              "children": []
+            },
+            {
+              "name": "Sopraintendente dei Templi",
+              "children": []
+            },
+            {
+              "name": "Sopraintendente del Lavoro",
+              "children": []
+            },
+            {
+              "name": "Sopraintendente delle Terre",
+              "children": []
+            },
+            {
+              "name": "Ufficiale Militare",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Membro Famiglia Reale",
+      "children": [
+        {
+          "name": "Faraone",
+          "children": []
+        },
+        {
+          "name": "Onorevole",
+          "children": []
+        },
+        {
+          "name": "Principe",
+          "children": []
+        },
+        {
+          "name": "Regina",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Ministro della Fede",
+      "children": [
+        {
+          "name": "Oracolo",
+          "children": []
+        },
+        {
+          "name": "Sacerdote",
+          "children": [
+            {
+              "name": "Sommo Sacerdote",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nobile",
+      "children": []
+    },
+    {
+      "name": "Popolano",
+      "children": [
+        {
+          "name": "Contadino",
+          "children": []
+        },
+        {
+          "name": "Medico",
+          "children": []
+        },
+        {
+          "name": "Mercante",
+          "children": []
+        },
+        {
+          "name": "Operaio",
+          "children": [
+            {
+              "name": "Capo degli Operai",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Servo",
+      "children": [
+        {
+          "name": "Concubina",
+          "children": []
+        },
+        {
+          "name": "Schiavo",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

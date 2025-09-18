@@ -1,0 +1,440 @@
+{
+  "name": "Materiale",
+  "children": [
+    {
+      "name": "Argilla",
+      "children": [
+        {
+          "name": "Argilla Calcarea",
+          "children": []
+        },
+        {
+          "name": "Argilla Caolinitica",
+          "children": []
+        },
+        {
+          "name": "Argilla Nilotica",
+          "children": []
+        },
+        {
+          "name": "Terracotta",
+          "children": []
+        },
+        {
+          "name": "Terracotta Caolinitica Da Assuan",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Carta",
+      "children": []
+    },
+    {
+      "name": "Cartonnage",
+      "children": []
+    },
+    {
+      "name": "Ceramica",
+      "children": [
+        {
+          "name": "Faience",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Fibra",
+      "children": [
+        {
+          "name": "Fibra Animale",
+          "children": [
+            {
+              "name": "Lana",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Fibra Vegetale",
+          "children": [
+            {
+              "name": "Lino",
+              "children": []
+            },
+            {
+              "name": "Papiro",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Intonaco Paglia e Fango",
+      "children": []
+    },
+    {
+      "name": "Legno",
+      "children": [
+        {
+          "name": "Canna",
+          "children": []
+        },
+        {
+          "name": "Ebano",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Metallo",
+      "children": [
+        {
+          "name": "Argento",
+          "children": []
+        },
+        {
+          "name": "Bronzo",
+          "children": []
+        },
+        {
+          "name": "Ferro",
+          "children": []
+        },
+        {
+          "name": "Lega Metallica",
+          "children": []
+        },
+        {
+          "name": "Oro",
+          "children": []
+        },
+        {
+          "name": "Ottone",
+          "children": []
+        },
+        {
+          "name": "Rame",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Minerale",
+      "children": [
+        {
+          "name": "Ametista",
+          "children": []
+        },
+        {
+          "name": "Avventurina",
+          "children": []
+        },
+        {
+          "name": "Blu Egizio",
+          "children": []
+        },
+        {
+          "name": "Calcedonio",
+          "children": []
+        },
+        {
+          "name": "Calcite",
+          "children": []
+        },
+        {
+          "name": "Calcite Alabastrina",
+          "children": []
+        },
+        {
+          "name": "Clorite",
+          "children": []
+        },
+        {
+          "name": "Corniola",
+          "children": []
+        },
+        {
+          "name": "Cristallo di Rocca",
+          "children": []
+        },
+        {
+          "name": "Ematite",
+          "children": []
+        },
+        {
+          "name": "Fayalite",
+          "children": []
+        },
+        {
+          "name": "Gesso",
+          "children": []
+        },
+        {
+          "name": "Magnetite",
+          "children": []
+        },
+        {
+          "name": "Ocra",
+          "children": []
+        },
+        {
+          "name": "Quarzo",
+          "children": []
+        },
+        {
+          "name": "Sale",
+          "children": []
+        },
+        {
+          "name": "Verde Egizio",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Organico",
+      "children": [
+        {
+          "name": "Organico Animale",
+          "children": [
+            {
+              "name": "Avorio",
+              "children": []
+            },
+            {
+              "name": "Cera",
+              "children": []
+            },
+            {
+              "name": "Conchiglia",
+              "children": []
+            },
+            {
+              "name": "Cuoio",
+              "children": []
+            },
+            {
+              "name": "Madreperla",
+              "children": []
+            },
+            {
+              "name": "Pelle",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Organico Vegetale",
+          "children": [
+            {
+              "name": "Paglia",
+              "children": []
+            },
+            {
+              "name": "Resina",
+              "children": []
+            },
+            {
+              "name": "Resina Di Pistacia",
+              "children": []
+            },
+            {
+              "name": "Terra",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Organico Umano",
+          "children": [
+            {
+              "name": "Capelli",
+              "children": []
+            },
+            {
+              "name": "Resti Umani",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Organico Vario",
+          "children": [
+            {
+              "name": "Fossile",
+              "children": []
+            },
+            {
+              "name": "Osso",
+              "children": []
+            },
+            {
+              "name": "Resti Organici",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pietra",
+      "children": [
+        {
+          "name": "Alabastro",
+          "children": []
+        },
+        {
+          "name": "Andesite",
+          "children": []
+        },
+        {
+          "name": "Andesite Porfirica",
+          "children": []
+        },
+        {
+          "name": "Anortosite",
+          "children": []
+        },
+        {
+          "name": "Arenaria",
+          "children": []
+        },
+        {
+          "name": "Basalto",
+          "children": []
+        },
+        {
+          "name": "Calcare",
+          "children": []
+        },
+        {
+          "name": "Diaspro",
+          "children": []
+        },
+        {
+          "name": "Diaspro Rosso",
+          "children": []
+        },
+        {
+          "name": "Diaspro Verde",
+          "children": []
+        },
+        {
+          "name": "Diorite",
+          "children": []
+        },
+        {
+          "name": "Gabbro",
+          "children": []
+        },
+        {
+          "name": "Gneiss",
+          "children": []
+        },
+        {
+          "name": "Gneiss Anortositico",
+          "children": []
+        },
+        {
+          "name": "Granito",
+          "children": []
+        },
+        {
+          "name": "Granito Rosa",
+          "children": []
+        },
+        {
+          "name": "Granodiorite",
+          "children": []
+        },
+        {
+          "name": "Grovacca",
+          "children": []
+        },
+        {
+          "name": "Lapislazzuli",
+          "children": []
+        },
+        {
+          "name": "Marmo",
+          "children": []
+        },
+        {
+          "name": "Pietra Dura",
+          "children": []
+        },
+        {
+          "name": "Pietra Lavica",
+          "children": []
+        },
+        {
+          "name": "Porfido",
+          "children": []
+        },
+        {
+          "name": "Porfido Rosso",
+          "children": []
+        },
+        {
+          "name": "Quarzite",
+          "children": []
+        },
+        {
+          "name": "Quarzodiorite",
+          "children": []
+        },
+        {
+          "name": "Selce",
+          "children": []
+        },
+        {
+          "name": "Serpentinite",
+          "children": []
+        },
+        {
+          "name": "Serpentino",
+          "children": []
+        },
+        {
+          "name": "Steatite",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Stoffa",
+      "children": []
+    },
+    {
+      "name": "Stucco",
+      "children": []
+    },
+    {
+      "name": "Tela",
+      "children": []
+    },
+    {
+      "name": "Vetro",
+      "children": [
+        {
+          "name": "Ossidiana",
+          "children": []
+        },
+        {
+          "name": "Pasta Vitrea",
+          "children": []
+        },
+        {
+          "name": "Vetro",
+          "children": []
+        },
+        {
+          "name": "Vetro Colorato",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Egitto",
+  "children": [
+    {
+      "name": "Alto Egitto",
+      "children": []
+    },
+    {
+      "name": "Basso Egitto",
+      "children": [
+        {
+          "name": "Assuan",
+          "children": [
+            {
+              "name": "Elefantina",
+              "children": []
+            },
+            {
+              "name": "Qubbet el-Hawa",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Gebelein",
+          "children": [
+            {
+              "name": "Collina Settentrionale",
+              "children": [
+                {
+                  "name": "Necropoli Nord",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Collina Meridionale",
+              "children": [
+                {
+                  "name": "Area Fortezza e Tempio",
+                  "children": []
+                },
+                {
+                  "name": "Necropoli Sud",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Necropoli dell'Ovest",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Luxor / Tebe",
+          "children": [
+            {
+              "name": "Valle dei Re",
+              "children": []
+            },
+            {
+              "name": "Valle delle Regine",
+              "children": []
+            },
+            {
+              "name": "Deir El-Medina",
+              "children": [
+                {
+                  "name": "Zona Necropoli",
+                  "children": []
+                },
+                {
+                  "name": "Zona Templi",
+                  "children": []
+                },
+                {
+                  "name": "Centro Abitato",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

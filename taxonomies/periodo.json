@@ -1,0 +1,149 @@
+{
+  "name": "Periodo",
+  "children": [
+    {
+      "name": "Antico Egitto",
+      "children": [
+        {
+          "name": "Epoca Predinastica",
+          "children": [
+            {
+              "name": "Naqada I",
+              "children": []
+            },
+            {
+              "name": "Naqada IA–IIB",
+              "children": []
+            },
+            {
+              "name": "Naqada IC–IIC",
+              "children": []
+            },
+            {
+              "name": "Naqada IC–IID",
+              "children": []
+            },
+            {
+              "name": "Naqada II",
+              "children": []
+            },
+            {
+              "name": "Naqada IIA",
+              "children": []
+            },
+            {
+              "name": "Naqada IIA–D",
+              "children": []
+            },
+            {
+              "name": "Naqada IIA–IIB",
+              "children": []
+            },
+            {
+              "name": "Naqada IIB–IIC",
+              "children": []
+            },
+            {
+              "name": "Naqada IIC",
+              "children": []
+            },
+            {
+              "name": "Naqada IIC–IID",
+              "children": []
+            },
+            {
+              "name": "Naqada IIC–IIIA",
+              "children": []
+            },
+            {
+              "name": "Naqada IID2",
+              "children": []
+            },
+            {
+              "name": "Naqada I–II",
+              "children": []
+            },
+            {
+              "name": "Naqada I–IIA",
+              "children": []
+            },
+            {
+              "name": "Naqada I–IIB",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Epoca Protodinastica",
+          "children": [
+            {
+              "name": "Naqada IIIA1",
+              "children": []
+            },
+            {
+              "name": "Naqada IIIA2",
+              "children": []
+            },
+            {
+              "name": "Naqada IIIB",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Antico Regno",
+          "children": []
+        },
+        {
+          "name": "Primo periodo intermedio",
+          "children": []
+        },
+        {
+          "name": "Medio Regno",
+          "children": []
+        },
+        {
+          "name": "Secondo periodo intermedio",
+          "children": []
+        },
+        {
+          "name": "Nuovo Regno",
+          "children": []
+        },
+        {
+          "name": "Terzo periodo intermedio",
+          "children": []
+        },
+        {
+          "name": "Epoca Tarda",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Periodo Greco-Romano",
+      "children": [
+        {
+          "name": "Periodo Tolemaico",
+          "children": []
+        },
+        {
+          "name": "Epoca Ellenistica",
+          "children": []
+        },
+        {
+          "name": "Epoca Romana",
+          "children": []
+        },
+        {
+          "name": "Epoca Bizantina",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Epoca Moderna",
+      "children": []
+    }
+  ]
+}
