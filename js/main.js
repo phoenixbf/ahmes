@@ -31,11 +31,6 @@ APP.setup = ()=>{
     APP.getStorage("main").then( APP.onDBLoaded ).catch( (err)=>{ console.log(err) } );
 };
 
-APP.setupUI = ()=>{
-    ATON.UI.get("toolbar").append(
-        ATON.UI.createButtonHome(),
-    );
-};
 
 APP.setupEventHandling = ()=>{
     // If our app required ore or more flares (plugins), we can also wait for them to be ready for specific setups
@@ -107,6 +102,25 @@ APP.onDBLoaded = (data)=>{
             ]})
         });
     }
+};
+
+/* 
+    UI
+=============================*/
+APP.setupUI = ()=>{
+    ATON.UI.get("toolbar").append(
+        ATON.UI.createButtonHome(),
+    );
+};
+
+APP.modalEditCurrentItem = ()=>{
+    let elBody = ATON.UI.createContainer();
+
+
+    ATON.UI.showModal({
+        header: "Edit "+APP._currItem,
+        body: elBody
+    });
 };
 
 /* If you plan to use an update routine (executed continuously), you can place its logic here.
