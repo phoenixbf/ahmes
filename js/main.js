@@ -176,7 +176,7 @@ APP.setupUI = ()=>{
         //ATON.UI.createButtonHome(),
 
         ATON.UI.createButton({
-            icon: "bi-list",
+            icon: "gallery", //"bi-list",
             //text: "Item",
             onpress: APP.modalPickItem
         }),
@@ -201,27 +201,47 @@ APP.modalPickItem = ()=>{
     });
 
     APP.reloadDB(()=>{
-        elBody.append(ATON.UI.createElementFromHTMLString("<h5>Manufatti</h5>"));
+        let elGaM = ATON.UI.createContainer();
+        let elGaL = ATON.UI.createContainer();
+
+        elBody.append(elGaM, elGaL);
+/*
+        elBody.append(ATON.UI.createTreeGroup({
+            items:[
+                {
+                    title: "Manufatti",
+                    content: elGaM
+                },
+                {
+                    title: "Luoghi",
+                    content: elGaL
+                }
+            ]
+        }));
+*/
+        elGaM.append(ATON.UI.createElementFromHTMLString("<h5>Manufatti</h5>"));
         for (let i in APP._db.manufatti){
             const I = APP._db.manufatti[i];
 
-            elBody.append(ATON.UI.createCard({
+            elGaM.append(ATON.UI.createCard({
                 size: "small",
                 title: (I.nome)? I.nome : i,
                 cover: (I.cover)? I.cover : APP.PATH_RES+"item-cover.jpg",
-                url: APP.basePath + "?i="+i
+                url: APP.basePath + "?i="+i,
+                useblurtint: true
             }));
         }
 
-        elBody.append(ATON.UI.createElementFromHTMLString("<h5>Luoghi</h5>"));
+        elGaL.append(ATON.UI.createElementFromHTMLString("<h5>Luoghi</h5>"));
         for (let i in APP._db.luoghi){
             const I = APP._db.luoghi[i];
 
-            elBody.append(ATON.UI.createCard({
+            elGaL.append(ATON.UI.createCard({
                 size: "small",
                 title: (I.nome)? I.nome : i,
                 cover: (I.cover)? I.cover : APP.PATH_RES+"item-cover.jpg",
-                url: APP.basePath + "?i="+i
+                url: APP.basePath + "?i="+i,
+                useblurtint: true
             }));
         }
 
@@ -233,7 +253,7 @@ APP.modalPickItem = ()=>{
 };
 
 APP.modalCover = ()=>{
-    let im = ATON.Utils.takeScreenshot(512, undefined, true);
+    let im = ATON.Utils.takeScreenshot(256, undefined, true);
     //let R = ATON.Utils.takeScreenshot(512, APP._currItem+".png", true);
 
     let elIMG = document.createElement("img");
@@ -348,14 +368,15 @@ APP.modalEditCurrentItem = ()=>{
                 text: "Save",
                 classes: "aton-btn-highlight",
                 onpress: ()=>{
-
+                    APP.addToStorage(APP.MAIN_DB, D);
+                    ATON.UI.hideModal();
                 }
             })
         ]
     }));
 
     ATON.UI.showModal({
-        header: "Edit "+APP._currItem,
+        header: "Edit '"+APP._currItem+"'",
         body: elBody
     });
 };
