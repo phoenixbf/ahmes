@@ -54,11 +54,41 @@
     .main-toolbar .aton-btn {
         background-color: rgba(var(--bs-body-bg-rgb), 0.0) !important;
     }
+
+    .bottom-container {
+        position: absolute;
+        
+        bottom: 0px;
+        width: 100%;
+        
+        text-align: center;
+    }
+    .bottom-toolbar {
+        display: inline-block;
+        margin: 4px;
+
+        background-color: rgba(var(--bs-body-bg-rgb), 0.5) !important;
+        border-radius: var(--bs-border-radius);
+
+        -webkit-backdrop-filter: blur(var(--aton-blur-radius));
+        backdrop-filter: blur(var(--aton-blur-radius));
+    }
+
     .field-label {
         display: block;
         padding: 4px;
         font-size: smaller;
         margin-top: 4px;
+    }
+
+    .field-descr {
+        width: 100%;
+        padding: 8px;
+    }
+    
+    .cover-img {
+        width: 100%;
+        border-radius: var(--bs-border-radius);
     }
     </style>
 
@@ -75,6 +105,10 @@
 
 <body>
     <div id="toolbar" class="aton-toolbar-top main-toolbar"></div>
+
+    <div class="bottom-container">
+        <div id="bottomToolbar" class="bottom-toolbar"></div>
+    </div>
 
     <div class="aton-poweredby" >
         Powered by <a href="https://aton.ispc.cnr.it/site/" target="_blank">ATON</a>
