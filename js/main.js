@@ -172,6 +172,10 @@ APP.onDBLoaded = ()=>{
     UI
 =============================*/
 APP.setupUI = ()=>{
+    ATON.UI.get("userToolbar").append(
+        ATON.UI.createButtonUser()
+    );
+
     ATON.UI.get("toolbar").append(
         //ATON.UI.createButtonHome(),
 

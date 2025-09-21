@@ -41,6 +41,10 @@
     <link rel="stylesheet" type="text/css" href="/res/css/main.css">
     <style>
     .main-toolbar {
+        top: 0px;
+        display: inline-block;
+        position: absolute;
+
         margin: 4px;
 
         z-index: 100 !important;
@@ -51,8 +55,19 @@
         -webkit-backdrop-filter: blur(var(--aton-blur-radius));
         backdrop-filter: blur(var(--aton-blur-radius));
     }
-    .main-toolbar .aton-btn {
-        background-color: rgba(var(--bs-body-bg-rgb), 0.0) !important;
+
+    .user-toolbar {
+        top: 0px;
+        right: 0px;
+        position: absolute;
+
+        margin: 4px;
+
+        background-color: rgba(var(--bs-body-bg-rgb), 0.3) !important;
+        border-radius: var(--bs-border-radius);
+
+        -webkit-backdrop-filter: blur(var(--aton-blur-radius));
+        backdrop-filter: blur(var(--aton-blur-radius));
     }
 
     .bottom-container {
@@ -104,7 +119,9 @@
 </head>
 
 <body>
-    <div id="toolbar" class="aton-toolbar-top main-toolbar"></div>
+    <div id="toolbar" class="main-toolbar"></div>
+
+    <div id="userToolbar" class="user-toolbar "></div>
 
     <div class="bottom-container">
         <div id="bottomToolbar" class="bottom-toolbar"></div>
