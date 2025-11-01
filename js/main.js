@@ -372,6 +372,8 @@ APP.modalEditCurrentItem = ()=>{
             onchange: (s)=>{
                 let v = s.split(APP.TAX_SEP);
                 let last = v[v.length-1].trim();
+                if (last.length < 1) return;
+
                 D[APP._currCat][APP._currItem].provenienza = last;
                 console.log(D[APP._currCat][APP._currItem])
             }
@@ -394,15 +396,7 @@ APP.modalEditCurrentItem = ()=>{
                 if (i < 0) return;
                 
                 D[APP._currCat][APP._currItem][list].splice(i, 1);
-/*
-                let o = {};
-                o[APP._currCat] = {};
-                o[APP._currCat][APP._currItem] = {};
-                o[APP._currCat][APP._currItem][list] = [];
-                //o[APP._currCat][APP._currItem][list][i] = term;
 
-                APP.deleteFromStorage(APP.MAIN_DB, o );
-*/
                 console.log(D[APP._currCat][APP._currItem][list]);
             }
         })); 
@@ -413,6 +407,7 @@ APP.modalEditCurrentItem = ()=>{
         onchange: (s)=>{
             let v = s.split(APP.TAX_SEP);
             let last = v[v.length-1].trim();
+            if (last.length < 1) return;
 
             let elInput = ATON.UI.getComponent(elInputPeriods, "input");
             elInput.value = "";
@@ -452,6 +447,7 @@ APP.modalEditCurrentItem = ()=>{
         onchange: (s)=>{
             let v = s.split(APP.TAX_SEP);
             let last = v[v.length-1].trim();
+            if (last.length < 1) return;
 
             let elInput = ATON.UI.getComponent(elInputMaterials, "input");
             elInput.value = "";
