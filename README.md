@@ -10,3 +10,11 @@
 
 ## Parameters
 - i: the item to load (ID from main db, e.g. "M009")
+
+## Config
+You need a `config.json` in your local `/Your-ATON-root-folder/wapps/ahmes/` indicating base collection root:
+```
+{
+    "collection": "my/path/to/models/"
+}
+```

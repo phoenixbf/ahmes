@@ -11,11 +11,13 @@ let APP = ATON.App.realize();
 APP.PATH_DB = APP.basePath + "data/main.json";
 APP.MAIN_DB = "main";
 
-APP.PATH_RES = APP.basePath + "res/";
+APP.PATH_RES  = APP.basePath + "res/";
+APP.PATH_CONF = APP.basePath + "config.json";
 
 APP.PATH_TAX = APP.basePath + "taxonomies/";
 APP.TAX_SEP  = " / ";
 
+APP._conf     = undefined;
 APP._currItem = undefined;
 APP._currCat  = undefined;
 APP._db       = undefined;
@@ -41,8 +43,11 @@ APP.setup = ()=>{
 	APP.setupEventHandling();
     APP.setupUI();
 
-    //APP.getStorage(APP.MAIN_DB).then( APP.onDBLoaded ).catch( (err)=>{ console.log(err) } );
-    APP.reloadDB( APP.onDBLoaded );
+    APP.loadJSONConfig(APP.PATH_CONF, (conf)=>{
+        APP._conf = conf;
+
+        APP.reloadDB( APP.onDBLoaded );
+    });
 };
 
 APP.reloadDB = (onComplete)=>{
@@ -136,6 +141,9 @@ APP.loadItem = (item)=>{
                 APP._currCat  = cat;
 
                 let url = I.models[0];
+
+                if (APP._conf && APP._conf.collection && !url.startsWith("http:")) url = APP._conf.collection + url;
+
                 APP.gItem.load( url );
                 if (url.endsWith(".json")) APP.gItem.setRotation(-1.57079632679,0.0,0.0);
             }
