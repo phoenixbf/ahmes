@@ -1,5 +1,8 @@
 /*
-	Main js entry for template ATON web-app
+	Main js entry for Ahmes web-app
+    developed under CHANGES project
+    
+    Author: bruno.fanini_AT_cnr.it
 
 ===============================================*/
 // Realize our app
@@ -89,6 +92,11 @@ APP.setupTaxonomies = ()=>{
     APP.TAX.periodi = [];
     ATON.REQ.get(APP.PATH_TAX+"periodo.json", (d)=>{
         APP.buildTaxList(APP.TAX.periodi, "", d.children);
+    });
+
+    APP.TAX.materiali = [];
+    ATON.REQ.get(APP.PATH_TAX+"materiale.json", (d)=>{
+        APP.buildTaxList(APP.TAX.materiali, "", d.children);
     });
 
     APP.TAX.aree = [];
@@ -363,6 +371,107 @@ APP.modalEditCurrentItem = ()=>{
     }
 
 
+    // Periods
+    let elPeriodsArea = ATON.UI.createContainer({
+        style: "margin-bottom:16px"
+    });
+    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Periodi</span>") );
+
+    // Helper routine
+    let appendTermToArea = (term,list,elArea)=>{
+        elArea.append( ATON.UI.createChip({
+            term: term,
+            onremove: ()=>{
+                let i = D[APP._currCat][APP._currItem][list].indexOf(term);
+                if (i < 0) return;
+                
+                D[APP._currCat][APP._currItem][list].splice(i, 1);
+/*
+                let o = {};
+                o[APP._currCat] = {};
+                o[APP._currCat][APP._currItem] = {};
+                o[APP._currCat][APP._currItem][list] = [];
+                //o[APP._currCat][APP._currItem][list][i] = term;
+
+                APP.deleteFromStorage(APP.MAIN_DB, o );
+*/
+                console.log(D[APP._currCat][APP._currItem][list]);
+            }
+        })); 
+    };
+
+    let elInputPeriods = ATON.UI.createInputText({
+        list: APP.TAX.periodi,
+        onchange: (s)=>{
+            let v = s.split(APP.TAX_SEP);
+            let last = v[v.length-1].trim();
+
+            let elInput = ATON.UI.getComponent(elInputPeriods, "input");
+            elInput.value = "";
+
+            if (!D[APP._currCat][APP._currItem].datazioni) D[APP._currCat][APP._currItem].datazioni = [];
+
+            let i = D[APP._currCat][APP._currItem].datazioni.indexOf(last);
+            if (i>=0) return;
+
+            D[APP._currCat][APP._currItem].datazioni.push(last);
+
+            appendTermToArea(last,"datazioni",elPeriodsArea);
+        }
+    });
+
+    elBody.append(elInputPeriods);
+
+    if (D[APP._currCat][APP._currItem].datazioni){
+        for (let p in D[APP._currCat][APP._currItem].datazioni)
+            appendTermToArea(
+                D[APP._currCat][APP._currItem].datazioni[p],
+                "datazioni",
+                elPeriodsArea
+            );
+    }
+    elBody.append(elPeriodsArea);
+
+
+    // Materials
+    let elMaterialsArea = ATON.UI.createContainer({
+        style: "margin-bottom:16px"
+    });
+    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Materiali</span>") );
+
+    let elInputMaterials = ATON.UI.createInputText({
+        list: APP.TAX.materiali,
+        onchange: (s)=>{
+            let v = s.split(APP.TAX_SEP);
+            let last = v[v.length-1].trim();
+
+            let elInput = ATON.UI.getComponent(elInputMaterials, "input");
+            elInput.value = "";
+
+            if (!D[APP._currCat][APP._currItem].materiali) D[APP._currCat][APP._currItem].materiali = [];
+
+            let i = D[APP._currCat][APP._currItem].materiali.indexOf(last);
+            if (i>=0) return;
+
+            D[APP._currCat][APP._currItem].materiali.push(last);
+
+            appendTermToArea(last,"materiali",elMaterialsArea);
+        }
+    });
+
+    elBody.append(elInputMaterials);
+
+    if (D[APP._currCat][APP._currItem].materiali){
+        for (let p in D[APP._currCat][APP._currItem].materiali) 
+            appendTermToArea(
+                D[APP._currCat][APP._currItem].materiali[p],
+                "materiali",
+                elMaterialsArea
+            );
+    }
+    elBody.append(elMaterialsArea);
+
+
     // Save
     elBody.append( ATON.UI.createContainer({ 
         classes: "d-grid gap-2",
@@ -372,7 +481,22 @@ APP.modalEditCurrentItem = ()=>{
                 text: "Save",
                 classes: "aton-btn-highlight",
                 onpress: ()=>{
-                    APP.addToStorage(APP.MAIN_DB, D);
+                    console.log(D)
+
+                    let o = {};
+                    o[APP._currCat] = {};
+                    o[APP._currCat][APP._currItem] = {};
+                    o[APP._currCat][APP._currItem].datazioni = [];
+                    APP.deleteFromStorage(APP.MAIN_DB, o ).then(()=>{
+                        o = {};
+                        o[APP._currCat] = {};
+                        o[APP._currCat][APP._currItem] = {};
+                        o[APP._currCat][APP._currItem].materiali = [];
+                        APP.deleteFromStorage(APP.MAIN_DB, o ).then(()=>{
+                            APP.addToStorage(APP.MAIN_DB, D);
+                        });
+                    });
+
                     ATON.UI.hideModal();
                 }
             })
