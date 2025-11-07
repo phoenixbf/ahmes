@@ -312,6 +312,8 @@ APP.modalCover = ()=>{
 };
 
 APP.modalEditCurrentItem = ()=>{
+    let vSize = new THREE.Vector3();
+
     let elBody = ATON.UI.createContainer({
         //style: "padding:4px"
     });
@@ -350,6 +352,21 @@ APP.modalEditCurrentItem = ()=>{
         }
     }));
 
+    // Size
+    if (APP._currCat !== "personaggi"){
+        elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Dimensioni</span>") );
+        elBody.append( ATON.UI.createVectorControl({
+            vector: vSize,
+            onupdate: ()=>{
+                if (!D[APP._currCat][APP._currItem].dimensioni) D[APP._currCat][APP._currItem].dimensioni = {};
+
+                D[APP._currCat][APP._currItem].dimensioni.x = vSize.x;
+                D[APP._currCat][APP._currItem].dimensioni.y = vSize.y;
+                D[APP._currCat][APP._currItem].dimensioni.z = vSize.z;
+            }
+        }));
+    }
+
     // Type
     elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Tipo</span>") );
     elBody.append( ATON.UI.createInputText({
@@ -364,7 +381,7 @@ APP.modalEditCurrentItem = ()=>{
     }));
 
     // Provenance
-    if (APP.TAX[APP._currCat] !== "personaggi"){
+    if (APP._currCat !== "personaggi"){
         elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Provenienza / Area</span>") );
         elBody.append( ATON.UI.createInputText({
             list: APP.TAX.aree,
@@ -437,43 +454,45 @@ APP.modalEditCurrentItem = ()=>{
 
 
     // Materials
-    let elMaterialsArea = ATON.UI.createContainer({
-        style: "margin-bottom:16px"
-    });
-    elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Materiali</span>") );
+    if (APP._currCat === "manufatti"){
+        let elMaterialsArea = ATON.UI.createContainer({
+            style: "margin-bottom:16px"
+        });
+        elBody.append( ATON.UI.createElementFromHTMLString("<span class='field-label'>Materiali</span>") );
 
-    let elInputMaterials = ATON.UI.createInputText({
-        list: APP.TAX.materiali,
-        onchange: (s)=>{
-            let v = s.split(APP.TAX_SEP);
-            let last = v[v.length-1].trim();
-            if (last.length < 1) return;
+        let elInputMaterials = ATON.UI.createInputText({
+            list: APP.TAX.materiali,
+            onchange: (s)=>{
+                let v = s.split(APP.TAX_SEP);
+                let last = v[v.length-1].trim();
+                if (last.length < 1) return;
 
-            let elInput = ATON.UI.getComponent(elInputMaterials, "input");
-            elInput.value = "";
+                let elInput = ATON.UI.getComponent(elInputMaterials, "input");
+                elInput.value = "";
 
-            if (!D[APP._currCat][APP._currItem].materiali) D[APP._currCat][APP._currItem].materiali = [];
+                if (!D[APP._currCat][APP._currItem].materiali) D[APP._currCat][APP._currItem].materiali = [];
 
-            let i = D[APP._currCat][APP._currItem].materiali.indexOf(last);
-            if (i>=0) return;
+                let i = D[APP._currCat][APP._currItem].materiali.indexOf(last);
+                if (i>=0) return;
 
-            D[APP._currCat][APP._currItem].materiali.push(last);
+                D[APP._currCat][APP._currItem].materiali.push(last);
 
-            appendTermToArea(last,"materiali",elMaterialsArea);
+                appendTermToArea(last,"materiali",elMaterialsArea);
+            }
+        });
+
+        elBody.append(elInputMaterials);
+
+        if (D[APP._currCat][APP._currItem].materiali){
+            for (let p in D[APP._currCat][APP._currItem].materiali) 
+                appendTermToArea(
+                    D[APP._currCat][APP._currItem].materiali[p],
+                    "materiali",
+                    elMaterialsArea
+                );
         }
-    });
-
-    elBody.append(elInputMaterials);
-
-    if (D[APP._currCat][APP._currItem].materiali){
-        for (let p in D[APP._currCat][APP._currItem].materiali) 
-            appendTermToArea(
-                D[APP._currCat][APP._currItem].materiali[p],
-                "materiali",
-                elMaterialsArea
-            );
+        elBody.append(elMaterialsArea);
     }
-    elBody.append(elMaterialsArea);
 
 
     // Save
